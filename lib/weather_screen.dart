@@ -44,7 +44,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
         actions: [
           IconButton(
             onPressed: () {
-              print("refrece");
+              print("refrese");
             },
             icon: const Icon(Icons.refresh),
           ),
@@ -63,7 +63,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                   decoration: InputDecoration(
                     border: const OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(20))),
-                    hintText: "Enter city name",
+                    hintText: "Enter city name ...",
                     suffixIcon: IconButton(
                       onPressed: () {},
                       icon: const Icon(
@@ -80,6 +80,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
               child: SizedBox(
                 width: double.infinity,
                 child: Card(
+                  color: const Color.fromARGB(255, 3, 43, 5),
                   elevation: 10,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16),
@@ -127,12 +128,21 @@ class _WeatherScreenState extends State<WeatherScreen> {
             const SizedBox(
               height: 10,
             ),
-            const Text(
-              "Weather Forecast",
-              style: TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
-              ),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Weather Forecast",
+                  style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Icon(
+                  Icons.arrow_right_sharp,
+                  size: 36,
+                )
+              ],
             ),
             const SizedBox(
               height: 10,
@@ -177,12 +187,22 @@ class _WeatherScreenState extends State<WeatherScreen> {
             const SizedBox(
               height: 10,
             ),
-            const Text(
-              "Additional Information",
-              style: TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
-              ),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text(
+                  "Additional Information",
+                  style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Icon(
+                  Icons.arrow_right_outlined,
+                  size: 36,
+                )
+              ],
             ),
             const SizedBox(
               height: 10,

@@ -10,6 +10,7 @@ class ForecastCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: const Color.fromARGB(255, 3, 43, 5),
       elevation: 6,
       child: Container(
         width: 100,
